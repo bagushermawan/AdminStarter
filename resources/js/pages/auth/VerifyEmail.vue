@@ -34,7 +34,7 @@
             <TextLink :href="route('logout')" method="post" as="button" class="mx-auto block text-sm"> Log out
             </TextLink>
             <Button variant="ghost" as-child class="w-auto min-w-0">
-                <Link :href="route('profile.edit')" class="cursor-default">Profile</Link>
+                <Link :href="route('admin.profile.edit')" class="cursor-default">Profile</Link>
             </Button>
         </form>
     </AuthLayout>

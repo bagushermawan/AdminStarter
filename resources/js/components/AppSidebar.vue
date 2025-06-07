@@ -12,13 +12,8 @@ import AppearanceToggle from '@/components/AppearanceToggle.vue';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
-        href: '/dashboard',
+        href: '/admin/dashboard',
         icon: LayoutGrid,
-    },
-    {
-        title: 'Dashboard',
-        href: '/dashboard',
-        icon: BookOpen,
     },
 ];
 
@@ -42,7 +37,7 @@ const footerNavItems: NavItem[] = [
             <SidebarMenu>
                 <SidebarMenuItem>
                     <SidebarMenuButton size="lg" as-child>
-                        <Link :href="route('dashboard')">
+                        <Link :href="route('admin.dashboard')">
                             <AppLogo />
                         </Link>
                     </SidebarMenuButton>

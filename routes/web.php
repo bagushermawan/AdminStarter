@@ -1,15 +1,18 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome');
 })->name('home');
 
-Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('dashboard', function () {
+        return Inertia::render('Dashboard');})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::resource('users', UserController::class);
+    });
 
 Route::get('/check-username', function (\Illuminate\Http\Request $request) {
     $base = preg_replace('/\s+/', '', strtolower($request->input('username')));
@@ -35,6 +38,5 @@ Route::get('/check-username', function (\Illuminate\Http\Request $request) {
     ]);
 });
 
-
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
+require __DIR__ . '/settings.php';
+require __DIR__ . '/auth.php';

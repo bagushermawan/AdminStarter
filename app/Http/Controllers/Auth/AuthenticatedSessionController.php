@@ -33,7 +33,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false))->with('successLogin', 'Welcome, ' . auth()->user()->name);
+        return redirect()->intended(route('admin.dashboard', absolute: false))->with('successLogin', 'Welcome, ' . auth()->user()->name);
     }
 
     /**

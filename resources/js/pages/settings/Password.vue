@@ -14,10 +14,9 @@ import { watch } from 'vue';
 import { toast } from 'vue-sonner';
 
 const breadcrumbItems: BreadcrumbItem[] = [
-    {
-        title: 'Password settings',
-        href: '/settings/password',
-    },
+    { title: 'Admin',href: '#',},
+    { title: 'Settings',href: '#',},
+    {title: 'Password',href: '/admin/settings/password',},
 ];
 
 const passwordInput = ref<HTMLInputElement | null>(null);

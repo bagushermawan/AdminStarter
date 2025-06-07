@@ -9,10 +9,9 @@ import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
 
 const breadcrumbItems: BreadcrumbItem[] = [
-    {
-        title: 'Appearance settings',
-        href: '/settings/appearance',
-    },
+    { title: 'Admin', href: '' },
+    { title: 'Settings', href: '' },
+    {title: 'Appearance',href: '/admin/settings/appearance',},
 ];
 </script>
 
